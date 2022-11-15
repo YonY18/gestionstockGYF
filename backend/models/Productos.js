@@ -2,11 +2,6 @@ import mongoose from 'mongoose'
 
 const productoSchema = mongoose.Schema( 
 {
-        nombre: {
-          type: String,
-          trim: true,
-          required: true
-        },
         precio: {
             type: Number,
             min: 0, max: 1000000,
@@ -22,9 +17,6 @@ const productoSchema = mongoose.Schema(
             default: Date.now
         }
     },
-    {
-      timestamps: true,
-    }
   )
 const ProductoCreate = mongoose.model("Productos", productoSchema)
 export default ProductoCreate

@@ -8,9 +8,6 @@ const categoriaSchema = mongoose.Schema(
               required: true
             },
         },
-        {
-            timestamps: true,
-        }
     );
     const CategoriaCreate = mongoose.model("Categorias", categoriaSchema)
     export default CategoriaCreate

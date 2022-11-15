@@ -8,7 +8,6 @@ const getCategoria = async (req, res) => {
 
 const postCategoria = async (req, res) => {
   const categoria = new Categoria(req.body)
-
   try {
     const categoriaAlmacenado = await categoria.save()
     res.json(categoriaAlmacenado)

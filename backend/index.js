@@ -4,6 +4,7 @@ import conectarDB from './config/db.js';
 import cors from "cors";
 
 import categoriesRoutes from './routes/categoriesRoutes.js';
+import productosRoutes from './routes/productosRoutes.js'
 
 const app = express();
 
@@ -37,6 +38,7 @@ app.use((req, res, next) => {
 //Ruteo
 
 app.use("/api/categorias", categoriesRoutes);
+app.use("/api/productos", productosRoutes)
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
