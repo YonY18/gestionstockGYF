@@ -21,8 +21,9 @@ function rootReducer(state = initialState, action) {
             }
             case 'FILTER_BY_PRESU':
             const allcats = state.productos
-            const PRODUNO = allcats.filter((e) => e.categoria.includes("PRODUNO"))
-            const PRODDOS = allcats.filter((e) => e.categoria.includes("PRODDOS"))
+            const PRODUNO = action.payload === "PRODUNO" ? allcats : allcats.filter((e) => e.categoria.includes("PRODUNO"))
+            const PRODDOS = allcats.filter((e) => e.categoria.includes('PRODDOS'))
+
             //let pequeños = gente.filter(persona => persona.edad <= 3)
             console.log(PRODDOS)
             console.log(PRODUNO)
