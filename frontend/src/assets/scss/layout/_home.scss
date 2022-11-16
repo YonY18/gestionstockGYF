@@ -1,0 +1,8 @@
+.contenedorHome {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    align-items: center;
+    max-width: 120rem;
+    margin: 0 auto;
+  }

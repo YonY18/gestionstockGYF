@@ -1,13 +1,20 @@
-import { useState } from 'react'
+import {
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom"
 
-function App() {
-  const [count, setCount] = useState(0)
+import Home from "../src/components/Home"
 
+export default function App(){
   return (
-    <div>
-     <h1>Gestion de Productos</h1>
-    </div>
+    <Routes>
+          <Route path="/" element={<Home />}/>
+    </Routes>
+
+
+
   )
 }
 
-export default App
+
