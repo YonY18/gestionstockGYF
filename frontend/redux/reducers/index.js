@@ -19,17 +19,28 @@ function rootReducer(state = initialState, action) {
               ...state,
               categorias: action.payload,
             }
+
             case 'FILTER_BY_PRESU':
             const allcats = state.productos
-            const PRODUNO = action.payload === "PRODUNO" ? allcats : allcats.filter((e) => e.categoria.includes("PRODUNO"))
-            const PRODDOS = allcats.filter((e) => e.categoria.includes('PRODDOS'))
-
+            const valor = action.payload
+            const PRODUNO = allcats ? allcats.filter((e) => e.categoria.includes("PRODUNO")) : null
+            const PRODDOS = allcats ? allcats.filter((e) => e.categoria.includes("PRODDOS")) : null
+            let PREUNO = PRODUNO.sort()
+            let PREDOS = PRODDOS.sort()
+            const PRESU = PRODUNO.filter((e) => e.precio <= valor);
+            //const PRESU = PRODUNO ? PRODUNO.filter((e) => e.precio.includes(valor)) : null
+ 
+            //var top10 = valoraciones.sort(function (a, b) { return b - a; }).slice(0, 10);
+            //Math.max(valor0, valor1)
             //let pequeños = gente.filter(persona => persona.edad <= 3)
+            console.log(allcats)
             console.log(PRODDOS)
             console.log(PRODUNO)
+            console.log(PRESU)
+            console.log(valor)
               return {
                 ...state,
-                filterProductos2: PRODDOS
+                filterProductos: PRESU
               }
 
             case 'FILTER_BY_CATEGORY':
@@ -37,6 +48,7 @@ function rootReducer(state = initialState, action) {
               const allProductos = state.productos
               const fitrocategoria = action.payload === "All" ?
                   allProductos : allProductos.filter((e) => e.categoria.includes(action.payload))
+                  console.log(allProductos)
                   return {
                     ...state,
                     filterProductos: fitrocategoria
