@@ -12,7 +12,7 @@ export default function Producto({
         <h1 className="nombre">ID{_id}</h1>
         <h2>Precio:{precio}$</h2>
         <p>Categoria:{categoria}</p>
-        <p>Fecha:{fecha_carga}</p>
+        <p>Fecha:{fecha_carga.split("T")[0]}</p>
       </div>
     </div>
   );

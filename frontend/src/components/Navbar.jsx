@@ -9,7 +9,7 @@ export default function Navbar() {
   const dispatch = useDispatch();
   const [input , setInput] = useState('')
   const [errors, setErrors] = useState({})
-  const re = /^[0-9a-zA-ZÁ-ÿ.:-\s]{0,40}$/;
+  const re = /^[0-9a-zA-ZÁ-ÿ.:-\s]{0,7}$/;
 
 
   const handleCategorySelect = (e) => {
