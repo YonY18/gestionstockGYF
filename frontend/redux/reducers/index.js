@@ -25,23 +25,24 @@ function rootReducer(state = initialState, action) {
             const valor = action.payload
             const PRODUNO = allcats ? allcats.filter((e) => e.categoria.includes("PRODUNO")) : null
             const PRODDOS = allcats ? allcats.filter((e) => e.categoria.includes("PRODDOS")) : null
-            let PREUNO = PRODUNO.sort()
-            let PREDOS = PRODDOS.sort()
-            const PRESU = PRODUNO.filter((e) => e.precio <= valor);
-            //const PRESU = PRODUNO ? PRODUNO.filter((e) => e.precio.includes(valor)) : null
- 
-            //var top10 = valoraciones.sort(function (a, b) { return b - a; }).slice(0, 10);
-            //Math.max(valor0, valor1)
-            //let pequeños = gente.filter(persona => persona.edad <= 3)
+            const PRESUUNO = PRODUNO.filter((e) => e.precio <= valor);
+            const PRESUDOS = PRODDOS.filter((e) => e.precio <= valor);
+            const PRESU = PRESUDOS.concat(PRESUUNO)
+
             console.log(allcats)
             console.log(PRODDOS)
             console.log(PRODUNO)
-            console.log(PRESU)
+            //console.log(PRESU)
             console.log(valor)
               return {
                 ...state,
                 filterProductos: PRESU
               }
+
+            //const PRESU = PRODUNO ? PRODUNO.filter((e) => e.precio.includes(valor)) : null
+            //var top10 = valoraciones.sort(function (a, b) { return b - a; }).slice(0, 10);
+            //Math.max(valor0, valor1)
+            //let pequeños = gente.filter(persona => persona.edad <= 3)
 
             case 'FILTER_BY_CATEGORY':
               console.log(action.payload)
