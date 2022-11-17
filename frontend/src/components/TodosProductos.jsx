@@ -8,11 +8,10 @@ function TodosProductos() {
 
 
   return (
-    <>
+    <div className="contenedorHomeTot">
     <h1>Productos</h1>
     <div className="contenedorHome">
       
-     
       {productos?.length > 0 ? (
             productos &&
             productos?.map((e, i) => {
@@ -35,7 +34,7 @@ function TodosProductos() {
             <p>Nada que mostrar</p>
           )}
     </div>
-    </>
+    </div>
   );
 }
 

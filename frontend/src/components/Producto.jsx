@@ -9,10 +9,10 @@ export default function Producto({
   return (
     <div className="cardItem">
       <div className="card">
-        <h1 className="nombre">ID{_id}</h1>
-        <h2>Precio:{precio}$</h2>
-        <p>Categoria:{categoria}</p>
-        <p>Fecha:{fecha_carga.split("T")[0]}</p>
+        <h1 className="nombre">ID: [{_id}]</h1>
+        <h2 className="precio">Precio: {precio}$</h2>
+        <p className="pclass">Categoria: {categoria}</p>
+        <p className="pclass">Fecha: {fecha_carga.split("T")[0]}</p>
       </div>
     </div>
   );

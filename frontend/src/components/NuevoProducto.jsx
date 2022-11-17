@@ -44,10 +44,13 @@ export default function NuevoProducto() {
        
   return (
     <div>
-      <div>Crear Producto</div>
-      <Link to="/">
-        <button>Home</button>
+    <div className="nav">
+    <Link to="/">
+        <label className="botonlabel">Home</label>
       </Link>
+      <h3>Crear Producto</h3>
+    </div>
+    <div className="formcreacion">
       <form onSubmit={handleSubmit}>
         <label>Precio</label>
         <input 
@@ -62,7 +65,7 @@ export default function NuevoProducto() {
             defaultValue="categoria"
             onChange={handleSelect}
             >
-          <option className="options" disabled></option>
+          <option className="options" selected>Categorias</option>
           <option value={"PRODUNO"}>PRODUNO</option>
           <option value={"PRODDOS"}>PRODDOS</option>
         </select>
@@ -76,6 +79,7 @@ export default function NuevoProducto() {
         type="submit"
         >Crear</button>
       </form>
+      </div>
     </div>
   );
 }

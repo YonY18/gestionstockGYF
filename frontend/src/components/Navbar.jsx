@@ -49,7 +49,7 @@ export default function Navbar() {
   return (
     <div className="nav">
       <Link to="/crear">
-        <button>Crear</button>
+        <label className="botonlabel">Crear</label>
       </Link>
       <div>
       <form onSubmit={handleSubmit} >
@@ -62,15 +62,13 @@ export default function Navbar() {
         onChange = {handleInputChange}
         />
         {errors.name && (
-        <div className="errors">
-        <p>{errors.name}</p>
+        <div>
+        <p className="errors">{errors.name}</p>
         </div>
        )}
         <button className="button" type='submit'>Buscar</button>
         </div>
       </form>
-
-
         <select
           defaultValue='Todas Las Categorias'
           onChange={handleCategorySelect}>
