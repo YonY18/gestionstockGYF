@@ -1,7 +1,9 @@
 import React from "react";
 import { useState } from 'react'
+import { Link } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux";
 import { filterByCategory, filterPresu } from "../../redux/actions";
+import NuevoProducto from "./NuevoProducto.jsx";
 
 export default function Navbar() {
 
@@ -46,7 +48,9 @@ export default function Navbar() {
 
   return (
     <div className="nav">
-      <button>Crear</button>
+      <Link to="/crear">
+        <button>Crear</button>
+      </Link>
       <div>
       <form onSubmit={handleSubmit} >
       <div>

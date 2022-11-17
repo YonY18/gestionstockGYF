@@ -30,6 +30,18 @@ export function getAllCategorias() {
     }
   };
 }
+export function createProducto(producto) {
+  console.log(producto)
+  return async function (dispatch) {
+    try {
+      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/productos`, producto);
+      alert("Producto Creado")
+  } catch (error) {
+    alert(error.response.data.message)
+  }
+  };
+  }
+
 export function filterPresu(payload) {
   return {
     type: 'FILTER_BY_PRESU',
