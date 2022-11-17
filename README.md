@@ -1,8 +1,8 @@
 # ** Gestor Stock y Presupuesto **
 
 ## Como Empezar
-
-Primero abrir una consola en el backend y otra en el frontend
+Primero: renombrar los .env.Ejemplo en .env
+Segundo: abrir una consola en el backend y otra en el frontend
 
 ```bash
 npm run dev

@@ -25,9 +25,10 @@ function rootReducer(state = initialState, action) {
             const valor = action.payload
             const PRODUNO = allcats ? allcats.filter((e) => e.categoria.includes("PRODUNO")) : null
             const PRODDOS = allcats ? allcats.filter((e) => e.categoria.includes("PRODDOS")) : null
-            const PRESUUNO = PRODUNO.filter((e) => e.precio <= valor);
-            const PRESUDOS = PRODDOS.filter((e) => e.precio <= valor);
+            const PRESUUNO = PRODUNO.filter((e) => e.precio <= valor/2);
+            const PRESUDOS = PRODDOS.filter((e) => e.precio <= valor/2);
             const PRESU = PRESUDOS.concat(PRESUUNO)
+            
 
             console.log(allcats)
             console.log(PRODDOS)
