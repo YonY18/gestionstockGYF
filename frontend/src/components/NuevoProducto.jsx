@@ -29,8 +29,8 @@ export default function NuevoProducto() {
         e.preventDefault()
         if (!input.precio.trim()) {
             return alert("Necesita introducir un Precio")
-          }else if (input.rating === "" || input.rating < 1 || input.rating > 7) {
-            return alert("Precio debe estar entre 1 y 7")
+          }else if (input.precio === "" || input.precio < 1 || input.precio > 7) {
+            return alert("Precio debe tener entre 1 y 7 caracteres")
           }else if (input.categoria === "") {
             return alert("Seleccione uno categoria")
           }else {
@@ -38,7 +38,8 @@ export default function NuevoProducto() {
           setInput({
             precio: "",
             categoria: "",
-          })}
+          })
+          window.location.reload()}
           
       }
        
@@ -65,13 +66,13 @@ export default function NuevoProducto() {
             defaultValue="categoria"
             onChange={handleSelect}
             >
-          <option className="options" selected>Categorias</option>
+          <option className="options" defaultValue={""}>Categorias</option>
           <option value={"PRODUNO"}>PRODUNO</option>
           <option value={"PRODDOS"}>PRODDOS</option>
         </select>
         {errors.name && (
-        <div className="errors">
-        <p>{errors.name}</p>
+        <div>
+        <p className="errors">{errors.name}</p>
         </div>
        )}
         <label>Fecha de creacion sera colocada automaticamente</label>

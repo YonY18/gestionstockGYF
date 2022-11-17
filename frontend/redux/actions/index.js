@@ -31,11 +31,10 @@ export function getAllCategorias() {
   };
 }
 export function createProducto(producto) {
-  console.log(producto)
   return async function (dispatch) {
     try {
       await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/productos`, producto);
-      alert("Producto Creado")
+      console.log(producto)
   } catch (error) {
     alert(error.response.data.message)
   }
