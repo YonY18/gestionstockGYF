@@ -9,7 +9,7 @@ function TodosProductos() {
 
   return (
     <div className="contenedorHomeTot">
-    <h1>Productos</h1>
+    <h1 className="titulo">Productos</h1>
     <div className="contenedorHome">
       
       {productos?.length > 0 ? (
@@ -18,7 +18,7 @@ function TodosProductos() {
               return (
                 <div key={i}>
                   {e.error ? (
-                    <h1>¡ERROR!</h1>
+                    <h1 className="errors">¡ERROR!</h1>
                   ) : (
                       <Producto
                         _id={e._id}
@@ -31,7 +31,7 @@ function TodosProductos() {
               );
             })
           ) : (
-            <p>Nada que mostrar</p>
+            <p className="nadamostrar">Nada que mostrar</p>
           )}
     </div>
     </div>

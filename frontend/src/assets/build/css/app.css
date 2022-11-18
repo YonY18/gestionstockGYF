@@ -406,14 +406,31 @@ img {
   }
 }
 
+.divinput {
+  grid-column: 2/4;
+  align-items: center;
+}
+
+.busqueda {
+  align-items: center;
+  grid-column: 3/4;
+}
+
 .contenedorHomeTot {
   padding: 1rem;
 }
 
 .errors {
-  color: red;
+  color: white;
+  text-align: center;
+  font-weight: bold;
   margin: 0.5rem;
-  font-size: 1rem;
+  background-color: red;
+  font-size: 1.5rem;
+}
+
+.titulo {
+  text-align: center;
 }
 
 .botonlabel {
@@ -469,6 +486,14 @@ img {
   align-items: center;
   line-height: 1rem;
   min-width: 5px;
+}
+
+.nadamostrar {
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.5;
+  grid-column: 2/2;
+  align-items: center;
 }
 
 .contenedorTotal {

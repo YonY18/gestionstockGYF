@@ -2,11 +2,16 @@
   padding: 1rem;
 }
 .errors{
-  color: red;
+  color: white;
+  text-align: center;
+  font-weight: bold;
   margin: 0.5rem;
-  font-size: 1rem;
+  background-color: red;
+  font-size: 1.5rem;
 }
-
+.titulo {
+  text-align: center;
+}
 .botonlabel {
   cursor: pointer;
   font-weight: bold;
