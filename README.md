@@ -8,7 +8,10 @@ Tercero: iniciar los servidores con
 ```bash
 npm run dev
 ```
+
+--Consola Backend
 ![backend](https://user-images.githubusercontent.com/85300818/202708509-d624343c-110f-45e0-b7db-227c9917b725.png)
+--Consola Frontend
 ![frontend](https://user-images.githubusercontent.com/85300818/202708520-3cdd1283-1774-4088-aad8-179aa0bfa3c1.png)
 
 
