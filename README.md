@@ -15,7 +15,7 @@ Abrir el enlace que lanzala consola del front [http://localhost:5173](http://loc
 
 
 
-## Leer mas
+## Documentaciones de las tecnologias usadas
 - [node](https://nodejs.org/en/docs/) -
 - [react](https://reactjs.org/docs/getting-started.html) -
 - [vite](https://vitejs.dev) - 
