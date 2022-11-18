@@ -29,8 +29,6 @@ export default function NuevoProducto() {
         e.preventDefault()
         if (!input.precio.trim()) {
             return alert("Necesita introducir un Precio")
-          }else if (input.precio === "" || input.precio < 1 || input.precio > 7) {
-            return alert("Precio debe tener entre 1 y 7 caracteres")
           }else if (input.categoria === "") {
             return alert("Seleccione uno categoria")
           }else {
