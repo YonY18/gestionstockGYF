@@ -3,6 +3,12 @@
 ## Como Empezar
 Primero: renombrar los .env.Ejemplo en .env
 Segundo: abrir una consola en el backend y otra en el frontend
+Tercero: Instalar las dependencias correspondientes con 
+
+```bash
+npm install
+```
+
 Tercero: iniciar los servidores con
 
 ```bash
